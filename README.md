@@ -6,23 +6,41 @@ Simple Console application for CRUD operation using NodeJS, KnexJS and PostgresD
 2. NumAndEmailMasking.js : using Regular Expression to mask the input phone number and email
     Examples
      input:
+
           0212666624
+
           212666624
+
           0064212626624
+
           +64212626624
+
           098381574
+
           abcdefg@gmail.com
+
           1234567@gmail.com
+
           abcd456@nsn.com
+
      output:
+
           021*****24
+
           021*****24
+
           0064*******24
+
           +6421*****24
+
           098****74
+
           a******@gmail.com
+
           1******@gmail.com
+
           a******@nsn.com
+          
 # To set up environment
 1. Download the source code 
 2. Use powershell or cmd navigate to the root folder
