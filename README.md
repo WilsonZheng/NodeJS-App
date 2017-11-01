@@ -58,6 +58,14 @@ Simple Console application for CRUD operation using NodeJS, KnexJS and PostgresD
 
 
 # Note
+Command to run the app:
+
+In CMD, navigate to the project folder contains app.js and NumAndEmailMasking.js, run the following command (NodeJS required to be installed):
+
+"node app.js"
+or
+"node NumAndEmailMasking.js"
+
 Command to push update:
 git push https://github.com/WilsonZheng/postgresDB-App.git HEAD:master
 
