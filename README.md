@@ -73,3 +73,4 @@ or "git push https://github.com/WilsonZheng/postgresDB-App.git HEAD:master"
 
 Command to pull update:
 git pull origin master
+
