@@ -1,4 +1,4 @@
-# postgresDB-App
+# Nodejs-App: using postgresDB
 Simple Console application for CRUD operation using NodeJS, KnexJS and PostgresDB
 
 # Features
@@ -40,7 +40,7 @@ Simple Console application for CRUD operation using NodeJS, KnexJS and PostgresD
           1******@gmail.com
 
           a******@nsn.com
-          
+
 # To set up environment
 1. Download the source code 
 2. Use powershell or cmd navigate to the root folder
