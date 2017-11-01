@@ -1,0 +1,24 @@
+{
+  "name": "postgresdb-app",
+  "version": "1.0.0",
+  "description": "Simple CRUD operation using NodeJS, KnexJS and PostgresDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WilsonZheng/NodeJS-App.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^0.13.0",
+    "pg": "^7.3.0"
+  },
+  "bugs": {
+    "url": "https://github.com/WilsonZheng/NodeJS-App/issues"
+  },
+  "homepage": "https://github.com/WilsonZheng/NodeJS-App#readme"
+  
+}
