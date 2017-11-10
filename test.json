@@ -1,0 +1,604 @@
+//---------------------------------------Sample output: mixed plan
+[
+    {
+        "Address": "2 Traditional Road",
+        "Products": [
+            {
+                "ProductType": "electricity",
+                "Data": {
+                    "Id": "0001445259UN10B"
+                }
+            }
+        ]
+    },
+    {
+        "Address": "2 Smart Road",
+        "Products": [
+            {
+                "ProductType": "gas",
+                "Data": {
+                    "Id": "0002044121QT660"
+                }
+            },
+            {
+                "ProductType": "electricity",
+                "Data": {
+                    "Id": "0000065607CP4C1",
+                    "IsTod": true,
+                    "CurrentUsage": 50.68,
+                    "UsageAsAt": "2017-12-16T11:00:00Z",
+                    "EstimatedUsage": 120.34,
+                    "Tod": [
+                        {
+                            "Bracket": "shoulder",
+                            "StartSec": 0,
+                            "EndSec": 60
+                        },
+                        {
+                            "Bracket": "peak",
+                            "StartSec": 60,
+                            "EndSec": 120
+                        },
+                        {
+                            "Bracket": "shoulder",
+                            "StartSec": 120,
+                            "EndSec": 160
+                        },
+                        {
+                            "Bracket": "off_peak",
+                            "StartSec": 160,
+                            "EndSec": 320
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]
+//----------------
+[
+    {
+        "Address": "AucklandStanley Bay9 Cautley Street",
+        "Products": {
+            "ProductType": "electricity",
+            "Data": {
+                "Id": "0001445259UN10B"
+            }
+        }
+    }
+]
+//-------------------
+[
+    {
+        "Address": "34 Colonial Drive, Silverdale",
+        "Products": {
+            "ProductType": "POWER",
+            "Data": {
+                "Id": "1001291607UN160"
+            }
+        }
+    },
+    {
+        "Address": "34 Colonial Drive, Silverdale",
+        "Products": {
+            "ProductType": "GAS",
+            "Data": {
+                "Id": "1001291497QT475"
+            }
+        }
+    },
+    {
+        "Address": "13/126 13/126 Whangaparaoa Road,RED BEACH,Red Beach 932",
+        "Products": {
+            "ProductType": "POWER",
+            "Data": {
+                "Id": "0001445259UN10B"
+            }
+        }
+    },
+    {
+        "Address": "13/126 13/126 Whangaparaoa Road,,Red Beach",
+        "Products": {
+            "ProductType": "GAS",
+            "Data": {
+                "Id": "0001011076NG3FF"
+            }
+        }
+    }
+]
+//-------------------------------------------
+[
+    {
+        "Address": "34 Colonial Drive, Silverdale",
+        "Products": {
+            "ProductType": "POWER",
+            "Data": {
+                "Id": "1001291607UN160",
+                "IsTod": "false",
+                "CurrentUsage": "50.68",
+                "UsageAsAt": "2017-12-16T11:00:00Z",
+                "EstimatedUsage": "120.34",
+                "Tod": [
+                    {
+                        "Bracket": "shoulder",
+                        "Start": "2017-10-23T21:00:00Z",
+                        "StartSec": 0,
+                        "End": "2017-10-24T04:59:59Z",
+                        "EndSec": 21600
+                    },
+                    {
+                        "Bracket": "peak",
+                        "Start": "2017-10-24T04:00:00Z",
+                        "StartSec": 21600,
+                        "End": "2017-10-24T06:59:59Z",
+                        "EndSec": 32400
+                    },
+                    {
+                        "Bracket": "shoulder",
+                        "Start": "2017-10-24T07:00:00Z",
+                        "StartSec": 32400,
+                        "End": "2017-10-24T09:59:59Z",
+                        "EndSec": 43200
+                    },
+                    {
+                        "Bracket": "off_peak",
+                        "Start": "2017-10-24T10:00:00Z",
+                        "StartSec": 43200,
+                        "End": "2017-10-24T17:59:59Z",
+                        "EndSec": 68400
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "Address": "34 Colonial Drive, Silverdale",
+        "Products": {
+            "ProductType": "GAS",
+            "Data": {
+                "Id": "1001291497QT475"
+            }
+        }
+    },
+    {
+        "Address": "13/126 13/126 Whangaparaoa Road,RED BEACH,Red Beach 932",
+        "Products": {
+            "ProductType": "POWER",
+            "Data": {
+                "Id": "0001445259UN10B",
+                "IsTod": "false",
+                "CurrentUsage": "50.68",
+                "UsageAsAt": "2017-12-16T11:00:00Z",
+                "EstimatedUsage": "120.34",
+                "Tod": [
+                    {
+                        "Bracket": "shoulder",
+                        "Start": "2017-10-23T21:00:00Z",
+                        "StartSec": 0,
+                        "End": "2017-10-24T04:59:59Z",
+                        "EndSec": 21600
+                    },
+                    {
+                        "Bracket": "peak",
+                        "Start": "2017-10-24T04:00:00Z",
+                        "StartSec": 21600,
+                        "End": "2017-10-24T06:59:59Z",
+                        "EndSec": 32400
+                    },
+                    {
+                        "Bracket": "shoulder",
+                        "Start": "2017-10-24T07:00:00Z",
+                        "StartSec": 32400,
+                        "End": "2017-10-24T09:59:59Z",
+                        "EndSec": 43200
+                    },
+                    {
+                        "Bracket": "off_peak",
+                        "Start": "2017-10-24T10:00:00Z",
+                        "StartSec": 43200,
+                        "End": "2017-10-24T17:59:59Z",
+                        "EndSec": 68400
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "Address": "13/126 13/126 Whangaparaoa Road,,Red Beach",
+        "Products": {
+            "ProductType": "GAS",
+            "Data": {
+                "Id": "0001011076NG3FF"
+            }
+        }
+    }
+]
+//----------------------------------------------------
+[
+    {
+        "Address": "34 Colonial Drive, Silverdale",
+        "Products": {
+            "ProductType": "POWER",
+            "Data": {
+                "Id": "1001291607UN160",
+                "IsTod": true,
+                "CurrentUsage": "50.68",
+                "UsageAsAt": "2017-12-16T11:00:00Z",
+                "EstimatedUsage": "120.34",
+                "Tod": [
+                    {
+                        "Bracket": "shoulder",
+                        "Start": "2017-10-23T21:00:00Z",
+                        "StartSec": 0,
+                        "End": "2017-10-24T04:59:59Z",
+                        "EndSec": 21600
+                    },
+                    {
+                        "Bracket": "peak",
+                        "Start": "2017-10-24T04:00:00Z",
+                        "StartSec": 21600,
+                        "End": "2017-10-24T06:59:59Z",
+                        "EndSec": 32400
+                    },
+                    {
+                        "Bracket": "shoulder",
+                        "Start": "2017-10-24T07:00:00Z",
+                        "StartSec": 32400,
+                        "End": "2017-10-24T09:59:59Z",
+                        "EndSec": 43200
+                    },
+                    {
+                        "Bracket": "off_peak",
+                        "Start": "2017-10-24T10:00:00Z",
+                        "StartSec": 43200,
+                        "End": "2017-10-24T17:59:59Z",
+                        "EndSec": 68400
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "Address": "34 Colonial Drive, Silverdale",
+        "Products": {
+            "ProductType": "GAS",
+            "Data": {
+                "Id": "1001291497QT475"
+            }
+        }
+    },
+    {
+        "Address": "13/126 13/126 Whangaparaoa Road,RED BEACH,Red Beach 932",
+        "Products": {
+            "ProductType": "POWER",
+            "Data": {
+                "Id": "0001445259UN10B",
+                "IsTod": true,
+                "CurrentUsage": "50.68",
+                "UsageAsAt": "2017-12-16T11:00:00Z",
+                "EstimatedUsage": "120.34",
+                "Tod": [
+                    {
+                        "Bracket": "shoulder",
+                        "Start": "2017-10-23T21:00:00Z",
+                        "StartSec": 0,
+                        "End": "2017-10-24T04:59:59Z",
+                        "EndSec": 21600
+                    },
+                    {
+                        "Bracket": "peak",
+                        "Start": "2017-10-24T04:00:00Z",
+                        "StartSec": 21600,
+                        "End": "2017-10-24T06:59:59Z",
+                        "EndSec": 32400
+                    },
+                    {
+                        "Bracket": "shoulder",
+                        "Start": "2017-10-24T07:00:00Z",
+                        "StartSec": 32400,
+                        "End": "2017-10-24T09:59:59Z",
+                        "EndSec": 43200
+                    },
+                    {
+                        "Bracket": "off_peak",
+                        "Start": "2017-10-24T10:00:00Z",
+                        "StartSec": 43200,
+                        "End": "2017-10-24T17:59:59Z",
+                        "EndSec": 68400
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "Address": "13/126 13/126 Whangaparaoa Road,,Red Beach",
+        "Products": {
+            "ProductType": "GAS",
+            "Data": {
+                "Id": "0001011076NG3FF"
+            }
+        }
+    }
+]
+//----------------------------------------
+[
+    {
+        "Address": "34 Colonial Drive, Silverdale",
+        "Products": [
+            {
+                "ProductType": null,
+                "Data": {
+                    "Id": null
+                }
+            }
+        ]
+    },
+    {
+        "Address": "34 Colonial Drive, Silverdale",
+        "Products": [
+            {
+                "ProductType": null,
+                "Data": {
+                    "Id": null
+                }
+            }
+        ]
+    },
+    {
+        "Address": "13/126 13/126 Whangaparaoa Road,RED BEACH,Red Beach 932",
+        "Products": [
+            {
+                "ProductType": null,
+                "Data": {
+                    "Id": null
+                }
+            }
+        ]
+    },
+    {
+        "Address": "13/126 13/126 Whangaparaoa Road,,Red Beach",
+        "Products": [
+            {
+                "ProductType": null,
+                "Data": {
+                    "Id": null
+                }
+            }
+        ]
+    }
+]
+Response: {
+    "statusCode": 200,
+    "headers": {
+        "Content-Type": "application/json"
+    },
+    "body": "[{\"Address\":\"34 Colonial Drive, Silverdale\",\"Products\":[{\"ProductType\":null,\"Data\":{\"Id\":null}}]},{\"Address\":\"34 Colonial Drive, Silverdale\",\"Products\":[{\"ProductType\":null,\"Data\":{\"Id\":null}}]},{\"Address\":\"13/126 13/126 Whangaparaoa Road,RED BEACH,Red Beach 932\",\"Products\":[{\"ProductType\":null,\"Data\":{\"Id\":null}}]},{\"Address\":\"13/126 13/126 Whangaparaoa Road,,Red Beach\",\"Products\":[{\"ProductType\":null,\"Data\":{\"Id\":null}}]}]"
+}
+//--------------------------------------------
+[
+    {
+        "Address": "34 Colonial Drive, Silverdale",
+        "Products": [
+            {
+                "ProductType": "POWER",
+                "Data": {
+                    "Id": "1001291607UN160",
+                    "IsTod": true,
+                    "CurrentUsage": "50.68",
+                    "UsageAsAt": "2017-12-16T11:00:00Z",
+                    "EstimatedUsage": "120.34",
+                    "Tod": [
+                        {
+                            "Bracket": "shoulder",
+                            "Start": "2017-10-23T21:00:00Z",
+                            "StartSec": 0,
+                            "End": "2017-10-24T04:59:59Z",
+                            "EndSec": 21600
+                        },
+                        {
+                            "Bracket": "peak",
+                            "Start": "2017-10-24T04:00:00Z",
+                            "StartSec": 21600,
+                            "End": "2017-10-24T06:59:59Z",
+                            "EndSec": 32400
+                        },
+                        {
+                            "Bracket": "shoulder",
+                            "Start": "2017-10-24T07:00:00Z",
+                            "StartSec": 32400,
+                            "End": "2017-10-24T09:59:59Z",
+                            "EndSec": 43200
+                        },
+                        {
+                            "Bracket": "off_peak",
+                            "Start": "2017-10-24T10:00:00Z",
+                            "StartSec": 43200,
+                            "End": "2017-10-24T17:59:59Z",
+                            "EndSec": 68400
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "Address": "34 Colonial Drive, Silverdale",
+        "Products": [
+            {
+                "ProductType": "GAS",
+                "Data": {
+                    "Id": "1001291497QT475"
+                }
+            }
+        ]
+    },
+    {
+        "Address": "13/126 13/126 Whangaparaoa Road,RED BEACH,Red Beach 932",
+        "Products": [
+            {
+                "ProductType": "POWER",
+                "Data": {
+                    "Id": "0001445259UN10B",
+                    "IsTod": true,
+                    "CurrentUsage": "50.68",
+                    "UsageAsAt": "2017-12-16T11:00:00Z",
+                    "EstimatedUsage": "120.34",
+                    "Tod": [
+                        {
+                            "Bracket": "shoulder",
+                            "Start": "2017-10-23T21:00:00Z",
+                            "StartSec": 0,
+                            "End": "2017-10-24T04:59:59Z",
+                            "EndSec": 21600
+                        },
+                        {
+                            "Bracket": "peak",
+                            "Start": "2017-10-24T04:00:00Z",
+                            "StartSec": 21600,
+                            "End": "2017-10-24T06:59:59Z",
+                            "EndSec": 32400
+                        },
+                        {
+                            "Bracket": "shoulder",
+                            "Start": "2017-10-24T07:00:00Z",
+                            "StartSec": 32400,
+                            "End": "2017-10-24T09:59:59Z",
+                            "EndSec": 43200
+                        },
+                        {
+                            "Bracket": "off_peak",
+                            "Start": "2017-10-24T10:00:00Z",
+                            "StartSec": 43200,
+                            "End": "2017-10-24T17:59:59Z",
+                            "EndSec": 68400
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "Address": "13/126 13/126 Whangaparaoa Road,,Red Beach",
+        "Products": [
+            {
+                "ProductType": "GAS",
+                "Data": {
+                    "Id": "0001011076NG3FF"
+                }
+            }
+        ]
+    }
+]
+//------------------------------------------
+[
+    {
+        "Address": "34 Colonial Drive, Silverdale",
+        "Products": [
+            {
+                "ProductType": "POWER",
+                "Data": {
+                    "Id": "1001291607UN160",
+                    "CurrentUsage": "50.68",
+                    "UsageAsAt": "2017-12-16T11:00:00Z",
+                    "EstimatedUsage": "120.34",
+                    "Tod": [
+                        {
+                            "Bracket": "shoulder",
+                            "Start": "2017-10-23T21:00:00Z",
+                            "StartSec": 0,
+                            "End": "2017-10-24T04:59:59Z",
+                            "EndSec": 21600
+                        },
+                        {
+                            "Bracket": "peak",
+                            "Start": "2017-10-24T04:00:00Z",
+                            "StartSec": 21600,
+                            "End": "2017-10-24T06:59:59Z",
+                            "EndSec": 32400
+                        },
+                        {
+                            "Bracket": "shoulder",
+                            "Start": "2017-10-24T07:00:00Z",
+                            "StartSec": 32400,
+                            "End": "2017-10-24T09:59:59Z",
+                            "EndSec": 43200
+                        },
+                        {
+                            "Bracket": "off_peak",
+                            "Start": "2017-10-24T10:00:00Z",
+                            "StartSec": 43200,
+                            "End": "2017-10-24T17:59:59Z",
+                            "EndSec": 68400
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "Address": "34 Colonial Drive, Silverdale",
+        "Products": [
+            {
+                "ProductType": "GAS",
+                "Data": {
+                    "Id": "1001291497QT475"
+                }
+            }
+        ]
+    },
+    {
+        "Address": "13/126 13/126 Whangaparaoa Road,RED BEACH,Red Beach 932",
+        "Products": [
+            {
+                "ProductType": "POWER",
+                "Data": {
+                    "Id": "0001445259UN10B",
+                    "CurrentUsage": "50.68",
+                    "UsageAsAt": "2017-12-16T11:00:00Z",
+                    "EstimatedUsage": "120.34",
+                    "Tod": [
+                        {
+                            "Bracket": "shoulder",
+                            "Start": "2017-10-23T21:00:00Z",
+                            "StartSec": 0,
+                            "End": "2017-10-24T04:59:59Z",
+                            "EndSec": 21600
+                        },
+                        {
+                            "Bracket": "peak",
+                            "Start": "2017-10-24T04:00:00Z",
+                            "StartSec": 21600,
+                            "End": "2017-10-24T06:59:59Z",
+                            "EndSec": 32400
+                        },
+                        {
+                            "Bracket": "shoulder",
+                            "Start": "2017-10-24T07:00:00Z",
+                            "StartSec": 32400,
+                            "End": "2017-10-24T09:59:59Z",
+                            "EndSec": 43200
+                        },
+                        {
+                            "Bracket": "off_peak",
+                            "Start": "2017-10-24T10:00:00Z",
+                            "StartSec": 43200,
+                            "End": "2017-10-24T17:59:59Z",
+                            "EndSec": 68400
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "Address": "13/126 13/126 Whangaparaoa Road,,Red Beach",
+        "Products": [
+            {
+                "ProductType": "GAS",
+                "Data": {
+                    "Id": "0001011076NG3FF"
+                }
+            }
+        ]
+    }
+]
