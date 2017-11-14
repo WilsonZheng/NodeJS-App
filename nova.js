@@ -1,3 +1,5 @@
+
+//--DB connection setup
 const pg = require('pg');
 const knex = require("knex")({
     client: 'pg',
