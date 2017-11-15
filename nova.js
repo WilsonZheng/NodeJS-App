@@ -28,9 +28,9 @@ const knex = require("knex")({
 // console.log(formatMobileNum("212626624"));
 
 //--WhiteListCheck:test cases  
-WhiteListCheck('ap-southeast-2:63ca9bb1-f34a-4d2e-a24f-dab84e4c9271');
+//WhiteListCheck('ap-southeast-2:63ca9bb1-f34a-4d2e-a24f-dab84e4c9271');
 WhiteListCheck('ap-southeast-2:e9ebe742-499a-4acf-ba19-a27a5889b805');
-WhiteListCheck('ap-southeast-2:b7cc31e1-be5d-4979-a21f-7f81a08f649b');
+//WhiteListCheck('ap-southeast-2:b7cc31e1-be5d-4979-a21f-7f81a08f649b');
 //--------------------Functions------------------------------
 //----get product summary api: return http response
 function getProductSummary(cogid) {
@@ -131,32 +131,61 @@ function formatMobileNum(mobileNum) {
 
     return formatedNum;
 }
-//--------------Method to do UAT white list privelige check: return true or false--------------------------------------
+//--------------Method to do white list privelige check: return true or false--------------------------------------
 function WhiteListCheck(cogid) {
 
-    knex.from('UatWhiteList')
-        .innerJoin('Contact', 'Contact.AccountId', 'UatWhiteList.AccountId')
-        .innerJoin('ContactRegister', 'Contact.Id', 'ContactRegister.ContactId')
-        .where({ 'ContactRegister.CognitoIdentity': cogid })
-        .select('UatWhiteList.AccountId', 'UatWhiteList.IsWhiteList')
-        .then(d => {
-            //console.log(d);
-            if (d.length == 1) {
-                if (d[0].IsWhiteList) {
-                    //console.log("True");
-                    return true;
-                } else {
-                    //console.log("False");
-                    return false;
-                }
-            } else {
-                //console.log("False");
-                return false;
-            }
-        }).catch(e => {
-            console.log(e);
-        }).finally(() => {
-            knex.close();
-        })
+    knex.from('ApiConfig').select('WhiteListEnabled').then(d => {
+        if (d[0].WhiteListEnabled) {
+            knex.from('WhiteListAccounts')
+                .innerJoin('Contact', 'Contact.AccountId', 'WhiteListAccounts.AccountId')
+                .innerJoin('ContactRegister', 'Contact.Id', 'ContactRegister.ContactId')
+                .where({ 'ContactRegister.CognitoIdentity': cogid })
+                .select('WhiteListAccounts.AccountId')
+                .then(d => {
+                    if (d.length == 1) {
 
+                        console.log("True");
+                        return true;
+
+                    } else {
+                        console.log("False");
+                        return false;
+                    }
+                })
+        } else {
+            return false;
+        }
+    }).catch(e => {
+        console.log(e);
+    }).finally(() => {
+        //knex.close();
+        knex.destroy();
+    })
+    
 }
+
+
+// knex.from('UatWhiteList')
+// .innerJoin('Contact', 'Contact.AccountId', 'UatWhiteList.AccountId')
+// .innerJoin('ContactRegister', 'Contact.Id', 'ContactRegister.ContactId')
+// .where({ 'ContactRegister.CognitoIdentity': cogid })
+// .select('UatWhiteList.AccountId', 'UatWhiteList.IsWhiteList')
+// .then(d => {
+//     //console.log(d);
+//     if (d.length == 1) {
+//         if (d[0].IsWhiteList) {
+//             //console.log("True");
+//             return true;
+//         } else {
+//             //console.log("False");
+//             return false;
+//         }
+//     } else {
+//         //console.log("False");
+//         return false;
+//     }
+// }).catch(e => {
+//     console.log(e);
+// }).finally(() => {
+//     knex.close();
+// })
