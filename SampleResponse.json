@@ -169,3 +169,87 @@
         ]
     }
 ]
+//----------------------------------
+{
+    "data": [
+        {
+            "summary": {
+                "last_measured_at": "2017-09-01T11:27:58.845+12:00",
+                "tariff_collection_identifier": "TOD_R_WAIK_STD_TODT_UN"
+            },
+            "measured": [
+                {
+                    "day_type": "ALL",
+                    "summary_type": "TOTAL",
+                    "collection_type": "ALL",
+                    "collection_grouping": "99",
+                    "count": 1344,
+                    "avg_kwh": "0.607",
+                    "avg_cost": "0.136",
+                    "sum_kwh": "815.693",
+                    "sum_cost": "182.813"
+                }
+            ],
+            "forecast": [
+                {
+                    "day_type": "ALL",
+                    "summary_type": "TOTAL",
+                    "collection_type": "ALL",
+                    "collection_grouping": "99",
+                    "count": 0,
+                    "avg_kwh": "0.000",
+                    "avg_cost": "0.000",
+                    "sum_kwh": "0.000",
+                    "sum_cost": "0.000"
+                }
+            ]
+        }
+    ]
+}
+//----------------------
+sumReturn: [
+    {
+        "Address": "12 12 Bernish Place,EAST TAMAKI HEIGHTS Manukau 2013",
+        "Products": [
+            {
+                "ProductType": "POWER",
+                "Data": {
+                    "Id": "0837362308LC656"
+                }
+            }
+        ]
+    },
+    {
+        "Address": "12 12 Bernish Place,EAST TAMAKI HEIGHTS Manukau 2013",
+        "Products": [
+            {
+                "ProductType": "GAS",
+                "Data": {
+                    "Id": "0001425178QT1B5"
+                }
+            }
+        ]
+    },
+    {
+        "Address": "18 Rohi Place,Flat Bush Auckland",
+        "Products": [
+            {
+                "ProductType": "POWER",
+                "Data": {
+                    "Id": "1001260026LC85E"
+                }
+            }
+        ]
+    },
+    {
+        "Address": "Lot 8/18 Rohi Place,Flat Bush Auckland",
+        "Products": [
+            {
+                "ProductType": "GAS",
+                "Data": {
+                    "Id": "1001262981QTD23"
+                }
+            }
+        ]
+    }
+]

@@ -14,11 +14,11 @@
   "license": "ISC",
   "dependencies": {
     "knex": "^0.13.0",
-    "pg": "^7.3.0"
+    "pg": "^7.3.0",
+    "typescript": "^2.6.1"
   },
   "bugs": {
     "url": "https://github.com/WilsonZheng/NodeJS-App/issues"
   },
   "homepage": "https://github.com/WilsonZheng/NodeJS-App#readme"
-  
 }
